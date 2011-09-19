@@ -338,3 +338,6 @@ If connectors already installed then you can change the selected one at: Window-
 	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
 	at org.eclipse.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2011-09-19 17:37:10.442
+!MESSAGE Referenced part does not exist yet: org.eclipse.jdt.ui.PackageExplorer.

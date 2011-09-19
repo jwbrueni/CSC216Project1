@@ -1,0 +1,91 @@
+package edu.ncsu.csc216.fire;
+
+import junit.framework.TestCase;
+
+public class GridTest extends TestCase {
+
+	/**
+	 * 
+	 */
+	public static Grid g;
+	
+	/**
+	 * 
+	 */
+	public static final int sideLength = 11;
+
+	/**
+	 * 
+	 */
+	public static final double probCatch = 55;
+	
+	/**
+	 * 
+	 */
+	protected void setUp() throws Exception {
+		super.setUp();
+		
+		g = new Grid(sideLength, probCatch);
+	}
+	
+	/**
+	 * 
+	 */
+	public void testGetGrid() {
+		for(int i = 0; i < sideLength; i++) {
+			assertEquals(g.getGrid()[i][0].getState(), Cell.EMPTY);
+			assertEquals(g.getGrid()[i][sideLength - 1].getState(), Cell.EMPTY);
+		}
+		
+		for(int i = 0; i < sideLength; i++) {
+			assertEquals(g.getGrid()[0][i].getState(), Cell.EMPTY);
+			assertEquals(g.getGrid()[sideLength - 1][i].getState(), Cell.EMPTY);
+		}
+		
+		for(int i = 1; i < sideLength-1; i++) {
+			for(int j = 1; j < sideLength-1; j++) {
+				if(i == 5 && j == 5)
+					assertEquals(g.getGrid()[i][j].getState(), Cell.BURNING);
+				else
+					assertEquals(g.getGrid()[i][j].getState(), Cell.TREE);
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	public void testDone() {
+		g.getGrid()[3][4].setState(Cell.BURNING);
+		assert(!g.done());
+		
+		for(int i = 0; i < sideLength; i++) {
+			for(int j = 0; j < sideLength; j++) {
+				g.getGrid()[i][j].setState(Cell.TREE);
+			}
+		}
+		assert(g.done());
+		
+		for(int i = 0; i < sideLength; i++) {
+			for(int j = 0; j < sideLength; j++) {
+				g.getGrid()[i][j].setState(Cell.EMPTY);
+			}
+		}
+		assert(g.done());
+		
+	}
+
+	/**
+	 * 
+	 */
+	public void testNextTimestep() {
+		for(int i = 1; i < sideLength-1; i++) {
+			for(int j = 1; j < sideLength-1; j++) {
+				g.getGrid()[i][j].setState(Cell.BURNING);
+				g.nextTimestep();
+				assertEquals(g.getGrid()[i][j].getState(), Cell.EMPTY);
+			}
+		}
+	}
+
+}
