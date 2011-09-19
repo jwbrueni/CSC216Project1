@@ -1,0 +1,340 @@
+!SESSION 2011-09-19 16:04:25.687 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_26
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/akofink/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/akofink/Dropbox/2011_2012/CSC 216/projects/1 -product org.eclipse.epp.package.java.product -keyring /Users/akofink/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-19 16:04:30.634
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2011-09-19 16:04:52.681
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:04:52.681
+!MESSAGE A conflict occurred for ALT+COMMAND+C:
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Commit,Commit,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.modify.method.parameters,Change Method Signature,
+		Change method signature includes parameter names and parameter order,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:04:52.681
+!MESSAGE A conflict occurred for ALT+COMMAND+M:
+Binding(ALT+COMMAND+M,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Merge,Merge,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+M,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.extract.method,Extract Method,
+		Extract a set of statements or an expression into a new method and use the new method,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:04:52.681
+!MESSAGE A conflict occurred for ALT+COMMAND+I:
+Binding(ALT+COMMAND+I,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Ignore,Ignore,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		org.eclipse.egit.ui.internal.actions.IgnoreActionHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.inline,Inline,
+		Inline a constant, local variable or method,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.057
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.057
+!MESSAGE Conflict for 'org.eclipse.team.cvs.ui.updateAll':
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.updateAll,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.mapping.MergeIncomingChangesAction@7e9949a3)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.updateAll,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.mapping.MergeIncomingChangesAction@1b1ad44)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.058
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.058
+!MESSAGE Conflict for 'org.eclipse.team.cvs.ui.commit':
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.commit,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.mappings.CommitAction@1a00a506)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.commit,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.mappings.CommitAction@20523a40)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.059
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.059
+!MESSAGE Conflict for 'org.eclipse.team.cvs.ui.commitAll':
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.commitAll,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.mappings.WorkspaceCommitAction@68dd9142)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.commitAll,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.mappings.WorkspaceCommitAction@2a6bb9d7)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.059
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.059
+!MESSAGE Conflict for 'org.eclipse.team.cvs.ui.ignore':
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.ignore,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.subscriber.CVSActionDelegateWrapper@514dc4f6)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=org.eclipse.team.cvs.ui.ignore,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ccvs.ui.subscriber.CVSActionDelegateWrapper@48be1c2d)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.060
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.060
+!MESSAGE Conflict for 'next':
+HandlerActivation(commandId=next,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.synchronize.actions.NavigateAction@560cb9e2)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=next,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.synchronize.actions.NavigateAction@5d7fd090)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.060
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-09-19 16:40:52.060
+!MESSAGE Conflict for 'previous':
+HandlerActivation(commandId=previous,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.synchronize.actions.NavigateAction@365f10e6)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+HandlerActivation(commandId=previous,
+	handler=LegacyHandlerWrapper(ActionHandler(action=org.eclipse.team.internal.ui.synchronize.actions.NavigateAction@1b4e87ed)),
+	expression=LegacyHandlerSubmission(Shell {Share Project},null,null),sourcePriority=5120)
+!SESSION 2011-09-19 16:46:49.511 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_26
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/akofink/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/akofink/Dropbox/2011_2012/CSC 216/projects/1 -product org.eclipse.epp.package.java.product -keyring /Users/akofink/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-09-19 16:47:02.143
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2011-09-19 16:47:07.815
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:47:07.815
+!MESSAGE A conflict occurred for ALT+COMMAND+C:
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Commit,Commit,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.modify.method.parameters,Change Method Signature,
+		Change method signature includes parameter names and parameter order,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:47:07.815
+!MESSAGE A conflict occurred for ALT+COMMAND+M:
+Binding(ALT+COMMAND+M,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Merge,Merge,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+M,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.extract.method,Extract Method,
+		Extract a set of statements or an expression into a new method and use the new method,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-19 16:47:07.815
+!MESSAGE A conflict occurred for ALT+COMMAND+I:
+Binding(ALT+COMMAND+I,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Ignore,Ignore,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		org.eclipse.egit.ui.internal.actions.IgnoreActionHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.inline,Inline,
+		Inline a constant, local variable or method,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:50:41.958
+!MESSAGE SVN: '0x00400006: Validate Repository Location' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:50:41.958
+!MESSAGE SVN: '0x00400006: Validate Repository Location' operation finished with error: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.utility.SVNUtility.validateRepositoryLocation(SVNUtility.java:777)
+	at org.eclipse.team.svn.ui.wizard.shareproject.AddRepositoryLocationPage$3.runImpl(AddRepositoryLocationPage.java:213)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:51:20.671
+!MESSAGE SVN: '0x00400006: Validate Repository Location' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:51:20.671
+!MESSAGE SVN: '0x00400006: Validate Repository Location' operation finished with error: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.utility.SVNUtility.validateRepositoryLocation(SVNUtility.java:777)
+	at org.eclipse.team.svn.ui.wizard.shareproject.AddRepositoryLocationPage$3.runImpl(AddRepositoryLocationPage.java:213)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.541
+!MESSAGE SVN: '0x00000230: Get Repository Folder Children' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.541
+!MESSAGE Get repository folder children operation failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryContainer.getChildren(SVNRepositoryContainer.java:77)
+	at org.eclipse.team.svn.core.operation.remote.GetRemoteFolderChildrenOperation.runImpl(GetRemoteFolderChildrenOperation.java:76)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:95)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.543
+!MESSAGE SVN: '0x00400107: Get Repository Resource Revision' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.543
+!MESSAGE Get repository resource revision operation failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryResource.getRevision(SVNRepositoryResource.java:95)
+	at org.eclipse.team.svn.ui.operation.GetRemoteResourceRevisionOperation.runImpl(GetRemoteResourceRevisionOperation.java:40)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:95)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.544
+!MESSAGE SVN: '0x00400107: Get Repository Resource Revision' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:14.544
+!MESSAGE Get repository resource revision operation failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryResource.getRevision(SVNRepositoryResource.java:95)
+	at org.eclipse.team.svn.ui.operation.GetRemoteResourceRevisionOperation.runImpl(GetRemoteResourceRevisionOperation.java:40)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:95)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:18.644
+!MESSAGE SVN: '0x00000230: Get Repository Folder Children' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2011-09-19 16:54:18.644
+!MESSAGE Get repository folder children operation failed.
+!STACK 0
+org.eclipse.team.svn.core.operation.UnreportableException: Selected SVN connector library is not available or cannot be loaded.
+If you selected native JavaHL connector, please check if binaries are available or install and select pure Java Subversion connector from the plug-in connectors update site.
+If connectors already installed then you can change the selected one at: Window->Preferences->Team->SVN->SVN Connector.
+	at org.eclipse.team.svn.core.extension.factory.ISVNConnectorFactory$1.newInstance(ISVNConnectorFactory.java:109)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.newProxyInstance(SVNRepositoryLocation.java:784)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryLocation.acquireSVNProxy(SVNRepositoryLocation.java:553)
+	at org.eclipse.team.svn.core.svnstorage.SVNRepositoryContainer.getChildren(SVNRepositoryContainer.java:77)
+	at org.eclipse.team.svn.core.operation.remote.GetRemoteFolderChildrenOperation.runImpl(GetRemoteFolderChildrenOperation.java:76)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:95)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:81)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:39)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.ui.utility.DefaultCancellableOperationWrapper.run(DefaultCancellableOperationWrapper.java:55)
+	at org.eclipse.team.svn.ui.utility.ScheduledOperationWrapper.run(ScheduledOperationWrapper.java:37)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

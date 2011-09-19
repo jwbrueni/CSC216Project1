@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.debug.ui,3.7.0.v20110518,"org.eclipse.debug.ui",1316465498050
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465500808
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465525812
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465531656
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465536509
+opened,view,org.eclipse.team.svn.ui,0.7.9.I20110523-1700,"org.eclipse.team.svn.ui.repository.RepositoriesView",1316465536639
+activated,view,org.eclipse.team.svn.ui,0.7.9.I20110523-1700,"org.eclipse.team.svn.ui.repository.RepositoriesView",1316465536664
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.views.showView",1316465536664
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.views.showView",1316465536664
+activated,view,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.PackageExplorer",1316465539717
+activated,view,org.eclipse.team.svn.ui,0.7.9.I20110523-1700,"org.eclipse.team.svn.ui.repository.RepositoriesView",1316465544930
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465554395
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1316465649505
+error,log,,,"SVN: '0x00000230: Get Repository Folder Children' operation finished with error",1316465654542
+error,log,,,"SVN: '0x00400107: Get Repository Resource Revision' operation finished with error",1316465654544
+error,log,,,"SVN: '0x00400107: Get Repository Resource Revision' operation finished with error",1316465654546
+error,log,,,"SVN: '0x00000230: Get Repository Folder Children' operation finished with error",1316465658645
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465661222
+activated,view,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.PackageExplorer",1316465663974
+closed,view,org.eclipse.team.svn.ui,0.7.9.I20110523-1700,"org.eclipse.team.svn.ui.repository.RepositoriesView",1316465663984
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465672368
+started,bundle,org.eclipse.ui.navigator,3.5.100.I20110524-0800,"org.eclipse.ui.navigator",1316465678347
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465732760
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465738961
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1316465744508
