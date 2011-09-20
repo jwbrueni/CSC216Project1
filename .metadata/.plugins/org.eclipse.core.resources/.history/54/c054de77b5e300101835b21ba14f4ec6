@@ -10,32 +10,32 @@ import java.util.Random;
 public class Cell extends Grid {
 	
 	/**
-	 *An empty cell
+	 * 
 	 */
 	public static final int EMPTY = 0;
 	
 	/**
-	 *A tree cell
+	 * 
 	 */
 	public static final int TREE = 1;
 	
 	/**
-	 *A burning cell
+	 * 
 	 */
 	public static final int BURNING = 2;
 	
 	/**
-	 *The probability of trees catching fire
+	 * 
 	 */
 	public static final double PROBCATCH = .55;
 	
 	/**
-	 *Holds the state of the cell
+	 * 
 	 */
 	private int state;
 	
 	/**
-	 *A Cell object inside a Grid
+	 * 
 	 *@param state
 	 */
 	public Cell(int state) {
@@ -44,7 +44,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *Gets the state of a cell
+	 * 
 	 *@return state
 	 */
 	public int getState() {
@@ -52,7 +52,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *Sets the state of the cell
+	 * 
 	 *@param state
 	 */
 	public void setState(int state) {
@@ -60,7 +60,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *
+	 * 
 	 *@return newCell
 	 */
 	public Cell copy() {

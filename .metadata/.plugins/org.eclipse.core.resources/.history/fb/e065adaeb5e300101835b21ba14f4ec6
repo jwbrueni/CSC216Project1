@@ -52,7 +52,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *Sets the state of the cell
+	 *
 	 *@param state
 	 */
 	public void setState(int state) {
@@ -60,7 +60,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *
+	 * 
 	 *@return newCell
 	 */
 	public Cell copy() {
