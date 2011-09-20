@@ -93,8 +93,9 @@ public class CellTest extends TestCase {
 				}
 			}
 		}
-		double percentage = (double) counter / (TIMESTOTEST * NUMOFADJACENTTREES);
-		assertTrue (percentage > PROBTEST - MARGIN && percentage < PROBTEST + MARGIN);
+		double percentage = counter / (TIMESTOTEST * NUMOFADJACENTTREES);
+		System.out.println(counter);
+		assertTrue (counter / (TIMESTOTEST * NUMOFADJACENTTREES) > PROBTEST - MARGIN && counter / (TIMESTOTEST * NUMOFADJACENTTREES) < PROBTEST + MARGIN);
 	}
 
 }
