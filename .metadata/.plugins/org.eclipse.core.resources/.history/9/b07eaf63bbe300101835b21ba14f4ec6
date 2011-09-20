@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * Cell is one part of a grid which holds state
-@author Andrew Kofink and James Bruening
+ * @author Andrew Kofink and James Bruening
  */
 public class Cell extends Grid {
 	
@@ -35,7 +35,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * A Cell object inside a Grid
-@param state
+	 * @param state
 	 */
 	public Cell(int state) {
 		super(state, PROBCATCH);
@@ -44,7 +44,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * Gets the state of a cell
-@return state
+	 * @return state
 	 */
 	public int getState() {
 		return state;
@@ -52,7 +52,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * Sets the state of the cell
-@param state
+	 * @param state
 	 */
 	public void setState(int state) {
 		this.state = state;
@@ -60,7 +60,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * Copies the Cell
-@return newCell
+	 * @return newCell
 	 */
 	public Cell copy() {
 		Cell newCell = new Cell(this.getState());
@@ -71,11 +71,11 @@ public class Cell extends Grid {
 	
 	/**
 	 * Spreads the fire based on the probability of probCatch
-@param probCatch
-@param north
-@param east
-@param south
-@param west
+	 * @param probCatch
+	 * @param north
+	 * @param east
+	 * @param south
+	 * @param west
 	 */
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
 		Cell[] cells = {north, east, south, west};

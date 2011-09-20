@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 /**
  * A test for the Cell test
-@author Andrew Kofink and James Bruening
+ @author Andrew Kofink and James Bruening
  */
 public class CellTest extends TestCase {
 	

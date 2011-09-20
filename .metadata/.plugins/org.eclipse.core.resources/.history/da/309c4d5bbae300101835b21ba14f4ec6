@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 /**
  * A test for the Cell test
-@author Andrew Kofink and James Bruening
+ * @author Andrew Kofink and James Bruening
  */
 public class CellTest extends TestCase {
 	
@@ -85,7 +85,7 @@ public class CellTest extends TestCase {
 			for (int j = 0; j < cells.length; j++) {
 				cells[j] = new Cell(NEWSTATE);
 			}
-			c.spread(PROBTEST, cells[0], cells[1], cells[2], cells[NUMOFADJACENTTREES - 1]);
+			c.spread(PROBTEST, cells[0], cells[1], cells[2], cells[NUMOFADJACENTTREES-1]);
 			for (int j = 0; j < cells.length; j++) {
 				if (cells[j].getState() == Cell.BURNING) {
 					counter++;
