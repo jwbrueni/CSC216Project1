@@ -1,0 +1,101 @@
+package edu.ncsu.csc216.fire;
+
+import junit.framework.TestCase;
+
+/**
+ * Tests the functionality of Grid
+@author Andrew Kofink and James Bruening
+ */
+public class GridTest extends TestCase {
+
+	/**
+	 * The grid object to test
+	 */
+	public static Grid g;
+	
+	/**
+	 * Side length of the grid
+	 */
+	public static final int SIDELENGTH = 11;
+
+	/**
+	 * Probability of the fire to spread
+	 */
+	public static final double PROBCATCH = 55;
+
+	/**
+	 * Center of the grid
+	 */
+	public static final int CENTER = 5;
+	
+	/**
+	 * Makes the new Grid object to test
+	 */
+	protected void setUp() throws Exception {
+		super.setUp();
+		
+		g = new Grid(SIDELENGTH, PROBCATCH);
+	}
+	
+	/**
+	 * Tests if the grid is returned
+	 */
+	public void testGetGrid() {
+		for (int i = 0; i < SIDELENGTH; i++) {
+			assertEquals (g.getGrid()[i][0].getState(), Cell.EMPTY);
+			assertEquals (g.getGrid()[i][SIDELENGTH - 1].getState(), Cell.EMPTY);
+		}
+		
+		for (int i = 0; i < SIDELENGTH; i++) {
+			assertEquals (g.getGrid()[0][i].getState(), Cell.EMPTY);
+			assertEquals (g.getGrid()[SIDELENGTH - 1][i].getState(), Cell.EMPTY);
+		}
+		
+		for (int i = 1; i < SIDELENGTH - 1; i++) {
+			for (int j = 1; j < SIDELENGTH - 1; j++) {
+				if (i == CENTER && j == CENTER) {
+					assertEquals (g.getGrid()[i][j].getState(), Cell.BURNING);
+				} else {
+					assertEquals (g.getGrid()[i][j].getState(), Cell.TREE);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Tests when the fire is done spreading
+	 */
+	public void testDone() {
+		g.getGrid()[CENTER][CENTER].setState(Cell.BURNING);
+		assertTrue (!g.done());
+		
+		for (int i = 0; i < SIDELENGTH; i++) {
+			for (int j = 0; j < SIDELENGTH; j++) {
+				g.getGrid()[i][j].setState(Cell.TREE);
+			}
+		}
+		assertTrue (g.done());
+		
+		for (int i = 0; i < SIDELENGTH; i++) {
+			for (int j = 0; j < SIDELENGTH; j++) {
+				g.getGrid()[i][j].setState(Cell.EMPTY);
+			}
+		}
+		assertTrue (g.done());
+		
+	}
+
+	/**
+	 * Tests incrementing the time step
+	 */
+	public void testNextTimestep() {
+		for (int i = 1; i < SIDELENGTH - 1; i++) {
+			for (int j = 1; j < SIDELENGTH - 1; j++) {
+				g.getGrid()[i][j].setState(Cell.BURNING);
+				g.nextTimestep();
+				assertEquals (g.getGrid()[i][j].getState(), Cell.EMPTY);
+			}
+		}
+	}
+
+}

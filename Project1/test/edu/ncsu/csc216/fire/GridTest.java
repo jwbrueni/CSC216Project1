@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 /**
  * Tests the functionality of Grid
-@author Andrew Kofink and James Bruening
+ * @author Andrew Kofink and James Bruening
  */
 public class GridTest extends TestCase {
 
@@ -14,9 +14,14 @@ public class GridTest extends TestCase {
 	public static Grid g;
 	
 	/**
-	 * Side length of the grid
+	 * Side length of the forest
 	 */
-	public static final int SIDELENGTH = 11;
+	public static final int SIDELENGTH = 9;
+	
+	/**
+	 * The actual side length of the grid
+	 */
+	public static final int ACTUALSIDELENGTH = 11;
 
 	/**
 	 * Probability of the fire to spread
@@ -41,18 +46,18 @@ public class GridTest extends TestCase {
 	 * Tests if the grid is returned
 	 */
 	public void testGetGrid() {
-		for (int i = 0; i < SIDELENGTH; i++) {
+		for (int i = 0; i < ACTUALSIDELENGTH; i++) {
 			assertEquals (g.getGrid()[i][0].getState(), Cell.EMPTY);
-			assertEquals (g.getGrid()[i][SIDELENGTH - 1].getState(), Cell.EMPTY);
+			assertEquals (g.getGrid()[i][ACTUALSIDELENGTH - 1].getState(), Cell.EMPTY);
 		}
 		
-		for (int i = 0; i < SIDELENGTH; i++) {
+		for (int i = 0; i < ACTUALSIDELENGTH; i++) {
 			assertEquals (g.getGrid()[0][i].getState(), Cell.EMPTY);
-			assertEquals (g.getGrid()[SIDELENGTH - 1][i].getState(), Cell.EMPTY);
+			assertEquals (g.getGrid()[ACTUALSIDELENGTH - 1][i].getState(), Cell.EMPTY);
 		}
 		
-		for (int i = 1; i < SIDELENGTH - 1; i++) {
-			for (int j = 1; j < SIDELENGTH - 1; j++) {
+		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
+			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
 				if (i == CENTER && j == CENTER) {
 					assertEquals (g.getGrid()[i][j].getState(), Cell.BURNING);
 				} else {
@@ -69,15 +74,15 @@ public class GridTest extends TestCase {
 		g.getGrid()[CENTER][CENTER].setState(Cell.BURNING);
 		assertTrue (!g.done());
 		
-		for (int i = 0; i < SIDELENGTH; i++) {
-			for (int j = 0; j < SIDELENGTH; j++) {
+		for (int i = 0; i < ACTUALSIDELENGTH; i++) {
+			for (int j = 0; j < ACTUALSIDELENGTH; j++) {
 				g.getGrid()[i][j].setState(Cell.TREE);
 			}
 		}
 		assertTrue (g.done());
 		
-		for (int i = 0; i < SIDELENGTH; i++) {
-			for (int j = 0; j < SIDELENGTH; j++) {
+		for (int i = 0; i < ACTUALSIDELENGTH; i++) {
+			for (int j = 0; j < ACTUALSIDELENGTH; j++) {
 				g.getGrid()[i][j].setState(Cell.EMPTY);
 			}
 		}
@@ -89,8 +94,8 @@ public class GridTest extends TestCase {
 	 * Tests incrementing the time step
 	 */
 	public void testNextTimestep() {
-		for (int i = 1; i < SIDELENGTH - 1; i++) {
-			for (int j = 1; j < SIDELENGTH - 1; j++) {
+		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
+			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
 				g.getGrid()[i][j].setState(Cell.BURNING);
 				g.nextTimestep();
 				assertEquals (g.getGrid()[i][j].getState(), Cell.EMPTY);

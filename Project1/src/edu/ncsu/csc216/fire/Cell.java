@@ -3,10 +3,10 @@ package edu.ncsu.csc216.fire;
 import java.util.Random;
 
 /**
- * Cell is one part of a grid which holds state
-@author Andrew Kofink and James Bruening
+ * The cell object which holds state
+ * @author Andrew Kofink and James Bruening
  */
-public class Cell extends Grid {
+public class Cell {
 	
 	/**
 	 * An empty cell
@@ -24,27 +24,21 @@ public class Cell extends Grid {
 	public static final int BURNING = 2;
 	
 	/**
-	 * The probability of trees catching fire
-	 */
-	public static final double PROBCATCH = .55;
-	
-	/**
 	 * Holds the state of the cell
 	 */
 	private int state;
 	
 	/**
 	 * A Cell object inside a Grid
-@param state
+	 * @param state The state of the cell
 	 */
 	public Cell(int state) {
-		super(state, PROBCATCH);
 		this.state = state;
 	}
 	
 	/**
 	 * Gets the state of a cell
-@return state
+	 * @return The state of the cell
 	 */
 	public int getState() {
 		return state;
@@ -52,7 +46,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * Sets the state of the cell
-@param state
+	 * @param state the state of the cell
 	 */
 	public void setState(int state) {
 		this.state = state;
@@ -60,7 +54,7 @@ public class Cell extends Grid {
 	
 	/**
 	 * Copies the Cell
-@return newCell
+	 * @return The new cell newCell
 	 */
 	public Cell copy() {
 		Cell newCell = new Cell(this.getState());
@@ -71,11 +65,11 @@ public class Cell extends Grid {
 	
 	/**
 	 * Spreads the fire based on the probability of probCatch
-@param probCatch
-@param north
-@param east
-@param south
-@param west
+	 * @param probCatch the probability that the fire will spread
+	 * @param north the north tree
+	 * @param east the east tree
+	 * @param south the south tree
+	 * @param west the west tree
 	 */
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
 		Cell[] cells = {north, east, south, west};
@@ -83,7 +77,7 @@ public class Cell extends Grid {
 			if (cell.getState() == 1) {
 				Random rand = new Random();
 				double currentRand = rand.nextDouble();
-				if (currentRand <= PROBCATCH) {
+				if (currentRand <= probCatch) {
 					cell.setState(Cell.BURNING);
 				}
 			}
