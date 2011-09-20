@@ -3,33 +3,34 @@ package edu.ncsu.csc216.fire;
 import junit.framework.TestCase;
 
 /**
- * Tests the functionality of Grid
+ * 
  * @author Andrew Kofink and James Bruening
+ *
  */
 public class GridTest extends TestCase {
 
 	/**
-	 * The grid object to test
+	 *The grid object to test
 	 */
 	public static Grid g;
 	
 	/**
-	 * Side length of the grid
+	 *Side length of the grid
 	 */
 	public static final int SIDELENGTH = 11;
 
 	/**
-	 * Probability of the fire to spread
+	 *Probability of the fire to spread
 	 */
 	public static final double PROBCATCH = 55;
 
 	/**
-	 * Center of the grid
+	 *Center of the grid
 	 */
 	public static final int CENTER = 5;
 	
 	/**
-	 * Makes the new Grid object to test
+	 *Makes the new Grid object to test
 	 */
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -38,7 +39,7 @@ public class GridTest extends TestCase {
 	}
 	
 	/**
-	 * Tests if the grid is returned
+	 *Tests if the grid is returned
 	 */
 	public void testGetGrid() {
 		for (int i = 0; i < SIDELENGTH; i++) {
@@ -63,7 +64,7 @@ public class GridTest extends TestCase {
 	}
 	
 	/**
-	 * Tests when the fire is done spreading
+	 *Tests when the fire is done spreading
 	 */
 	public void testDone() {
 		g.getGrid()[CENTER][CENTER].setState(Cell.BURNING);
@@ -86,7 +87,7 @@ public class GridTest extends TestCase {
 	}
 
 	/**
-	 * Tests incrementing the time step
+	 *Tests incrementing the time step
 	 */
 	public void testNextTimestep() {
 		for (int i = 1; i < SIDELENGTH - 1; i++) {

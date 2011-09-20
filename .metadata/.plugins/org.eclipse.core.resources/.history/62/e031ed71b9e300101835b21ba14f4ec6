@@ -3,39 +3,40 @@ package edu.ncsu.csc216.fire;
 import java.util.Random;
 
 /**
- * Cell is one part of a grid which holds state
+ * 
  * @author Andrew Kofink and James Bruening
+ *
  */
 public class Cell extends Grid {
 	
 	/**
-	 * An empty cell
+	 *An empty cell
 	 */
 	public static final int EMPTY = 0;
 	
 	/**
-	 * A tree cell
+	 *A tree cell
 	 */
 	public static final int TREE = 1;
 	
 	/**
-	 * A burning cell
+	 *A burning cell
 	 */
 	public static final int BURNING = 2;
 	
 	/**
-	 * The probability of trees catching fire
+	 *The probability of trees catching fire
 	 */
 	public static final double PROBCATCH = .55;
 	
 	/**
-	 * Holds the state of the cell
+	 *Holds the state of the cell
 	 */
 	private int state;
 	
 	/**
-	 * A Cell object inside a Grid
-	 * @param state
+	 *A Cell object inside a Grid
+	 *@param state
 	 */
 	public Cell(int state) {
 		super(state, PROBCATCH);
@@ -43,24 +44,24 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 * Gets the state of a cell
-	 * @return state
+	 *Gets the state of a cell
+	 *@return state
 	 */
 	public int getState() {
 		return state;
 	}
 	
 	/**
-	 * Sets the state of the cell
-	 * @param state
+	 *Sets the state of the cell
+	 *@param state
 	 */
 	public void setState(int state) {
 		this.state = state;
 	}
 	
 	/**
-	 * Copies the Cell
-	 * @return newCell
+	 *Copies the Cell
+	 *@return newCell
 	 */
 	public Cell copy() {
 		Cell newCell = new Cell(this.getState());
@@ -70,12 +71,12 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 * Spreads the fire based on the probability of probCatch
-	 * @param probCatch
-	 * @param north
-	 * @param east
-	 * @param south
-	 * @param west
+	 *Spreads the fire based on the probability of probCatch
+	 *@param probCatch
+	 *@param north
+	 *@param east
+	 *@param south
+	 *@param west
 	 */
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
 		Cell[] cells = {north, east, south, west};
