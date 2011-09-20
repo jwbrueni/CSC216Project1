@@ -51,7 +51,7 @@ public class Grid {
 	}
 	
 	/**
-	 *Gets the grid of cells
+	 * 
 	 *@return
 	 */
 	public Cell[][] getGrid() {
@@ -59,7 +59,7 @@ public class Grid {
 	}
 	
 	/**
-	 *Tests if burning is done
+	 * 
 	 *@return
 	 */
 	public boolean done() {
@@ -74,7 +74,7 @@ public class Grid {
 	}
 	
 	/**
-	 *Increments to the time step
+	 * 
 	 */
 	public void nextTimestep() {
 		for (int i = 0; i < sideLength; i++) {

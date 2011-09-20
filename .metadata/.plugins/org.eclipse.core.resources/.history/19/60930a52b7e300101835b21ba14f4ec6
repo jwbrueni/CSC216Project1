@@ -40,12 +40,12 @@ public class CellTest extends TestCase {
 	private static final double MARGIN = .1;
 
 	/**
-	 *Number of adjacent trees (N, S, E, W)
+	 *
 	 */
 	private static final int NUMOFADJACENTTREES = 4;
 	
 	/**
-	 *Builds a cell, c.
+	 * 
 	 */
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -54,14 +54,14 @@ public class CellTest extends TestCase {
 	}
 	
 	/**
-	 *Tests whether the proper state is returned
+	 * 
 	 */
 	public void testGetState() {
 		assertEquals (c.getState(), TESTSTATE);
 	}
 	
 	/**
-	 *Tests whether the state is successfully set
+	 * 
 	 */
 	public void testSetState() {
 		c.setState(NEWSTATE);
@@ -70,14 +70,14 @@ public class CellTest extends TestCase {
 	}
 	
 	/**
-	 *Tests the copy method of a cell
+	 * 
 	 */
 	public void testCopy() {
 		assertEquals (c, c.copy());
 	}
 	
 	/**
-	 *Tests the spreading of fire
+	 * 
 	 */
 	public void testSpread() {
 		int counter = 0;

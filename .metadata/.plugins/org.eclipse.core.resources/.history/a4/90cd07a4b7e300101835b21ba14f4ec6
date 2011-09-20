@@ -70,14 +70,14 @@ public class CellTest extends TestCase {
 	}
 	
 	/**
-	 *Tests the copy method of a cell
+	 *
 	 */
 	public void testCopy() {
 		assertEquals (c, c.copy());
 	}
 	
 	/**
-	 *Tests the spreading of fire
+	 * 
 	 */
 	public void testSpread() {
 		int counter = 0;

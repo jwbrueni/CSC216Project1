@@ -60,7 +60,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *Copies the Cell
+	 *
 	 *@return newCell
 	 */
 	public Cell copy() {
@@ -71,7 +71,7 @@ public class Cell extends Grid {
 	}
 	
 	/**
-	 *Spreads the fire based on the probability of probCatch
+	 * 
 	 *@param probCatch
 	 *@param north
 	 *@param east

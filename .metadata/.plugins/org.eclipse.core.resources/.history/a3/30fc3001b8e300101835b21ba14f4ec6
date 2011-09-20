@@ -87,7 +87,7 @@ public class GridTest extends TestCase {
 	}
 
 	/**
-	 *Tests incrementing the time step
+	 *Tests incrementing the timestep
 	 */
 	public void testNextTimestep() {
 		for (int i = 1; i < SIDELENGTH - 1; i++) {

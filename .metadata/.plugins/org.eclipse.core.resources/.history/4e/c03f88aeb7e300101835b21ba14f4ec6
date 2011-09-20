@@ -77,7 +77,7 @@ public class CellTest extends TestCase {
 	}
 	
 	/**
-	 *Tests the spreading of fire
+	 *
 	 */
 	public void testSpread() {
 		int counter = 0;
