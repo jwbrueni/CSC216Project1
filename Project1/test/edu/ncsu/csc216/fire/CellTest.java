@@ -100,8 +100,6 @@ public class CellTest extends TestCase {
 		//next test that spread works in all cells, even boundary cases
 		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
 			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
-				//set current test cell to tree
-				g.getGrid()[i][j].setState(Cell.TREE);
 				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
 				int k = 0;
 				cell[k++] = g.getGrid()[i][j];
@@ -109,19 +107,33 @@ public class CellTest extends TestCase {
 				cell[k++] = g.getGrid()[i - 1][j];
 				cell[k++] = g.getGrid()[i][j + 1];
 				cell[k++] = g.getGrid()[i][j - 1];
-				
-				k = 0;
-				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				
-				k = 1;
-				if (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
-					assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
+				for (int l = 0; l < cell.length; l++) {
+					cell[l].setState(Cell.TREE);
 				}
-				
-				g.getGrid()[i][j].setState(Cell.EMPTY);
-				k = 0;
-				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				assertEquals (cell[0].getState(), Cell.EMPTY);
+				for (int l = 1; l < cell.length; l++) {
+					cell[l].setState(Cell.BURNING);
+					//set current test cell to tree
+					g.getGrid()[i][j].setState(Cell.TREE);
+					
+					
+					k = 0;
+					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
+					
+					k = 1;
+					if (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
+						assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
+					}
+					
+					g.getGrid()[i][j].setState(Cell.EMPTY);
+					k = 0;
+					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
+					assertEquals (cell[0].getState(), Cell.EMPTY);
+					
+					g.getGrid()[i][j].setState(Cell.BURNING);
+					k = 0;
+					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
+					assertEquals (cell[0].getState(), Cell.BURNING);
+				}
 			}
 		}
 	}
