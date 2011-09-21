@@ -109,19 +109,15 @@ public class CellTest extends TestCase {
 				cell[k++] = g.getGrid()[i - 1][j];
 				cell[k++] = g.getGrid()[i][j + 1];
 				cell[k++] = g.getGrid()[i][j - 1];
+				int oldState = cell[0].getState();
 				
 				k = 0;
 				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
 				
 				k = 1;
-				if (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
+				if (oldState == Cell.TREE && (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING)) {
 					assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
 				}
-				
-				g.getGrid()[i][j].setState(Cell.EMPTY);
-				k = 0;
-				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				assertEquals (cell[0].getState(), Cell.EMPTY);
 			}
 		}
 	}

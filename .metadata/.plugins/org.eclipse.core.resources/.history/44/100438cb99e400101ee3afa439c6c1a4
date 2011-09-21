@@ -98,10 +98,14 @@ public class CellTest extends TestCase {
 	public void testSpread() {
 		testProperProbability();
 		//next test that spread works in all cells, even boundary cases
-		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
-			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
+		for (int i = 0; i < ACTUALSIDELENGTH; i++) {
+			for (int j = 0; j < ACTUALSIDELENGTH; j++) {
 				//set current test cell to tree
-				g.getGrid()[i][j].setState(Cell.TREE);
+				if (i == 0 || i == 10 || j == 0 || j == 10) {
+					g.getGrid()[i][j].setState(Cell.EMPTY);
+				} else {
+					g.getGrid()[i][j].setState(Cell.TREE);
+				}
 				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
 				int k = 0;
 				cell[k++] = g.getGrid()[i][j];
@@ -110,18 +114,17 @@ public class CellTest extends TestCase {
 				cell[k++] = g.getGrid()[i][j + 1];
 				cell[k++] = g.getGrid()[i][j - 1];
 				
+				int oldState = cell[0].getState();
+				
 				k = 0;
 				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
 				
 				k = 1;
-				if (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
+				if (oldState == Cell.TREE && (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING)) {
 					assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
+				} else if (oldState == Cell.EMPTY) {
+					assertEquals(cell[0].getState(), Cell.EMPTY);
 				}
-				
-				g.getGrid()[i][j].setState(Cell.EMPTY);
-				k = 0;
-				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				assertEquals (cell[0].getState(), Cell.EMPTY);
 			}
 		}
 	}

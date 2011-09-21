@@ -121,7 +121,6 @@ public class CellTest extends TestCase {
 				g.getGrid()[i][j].setState(Cell.EMPTY);
 				k = 0;
 				cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				assertEquals (cell[0].getState(), Cell.EMPTY);
 			}
 		}
 	}
