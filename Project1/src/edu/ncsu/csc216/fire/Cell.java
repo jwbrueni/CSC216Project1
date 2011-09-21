@@ -72,18 +72,11 @@ public class Cell {
 	 * @param west the west tree
 	 */
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
-		Cell[] cells = {north, east, south, west};
-		for (Cell cell : cells) {
-			if (cell.getState() == 1) {
-				Random rand = new Random();
-				double currentRand = rand.nextDouble();
-				if (currentRand <= probCatch) {
-					cell.setState(Cell.BURNING);
-				}
-			} else if (cell.getState() == 2) {
-				cell.setState(Cell.EMPTY);
+		if (north.getState() == Cell.BURNING || east.getState() == Cell.BURNING || south.getState() == Cell.BURNING || west.getState() == Cell.BURNING) {
+			Random rand = new Random();
+			if (rand.nextDouble() <= probCatch) {
+				this.setState(Cell.BURNING);
 			}
 		}
-		this.setState(Cell.EMPTY);
 	}	
 }

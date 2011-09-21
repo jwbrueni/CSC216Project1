@@ -95,25 +95,32 @@ public class CellTest extends TestCase {
 	 * Tests the spreading of fire
 	 */
 	public void testSpread() {
+		//first test for proper probability usage
 		int counter = 0;
 		for (int i = 0; i < TIMESTOTEST; i++) {
-			Cell[] cells = new Cell[NUMOFADJACENTTREES];
-			for (int j = 0; j < cells.length; j++) {
-				cells[j] = new Cell(NEWSTATE);
+			Cell[] cells = new Cell[NUMOFADJACENTTREES + 1];
+			
+			//filling arbitrary cells with tree in center and fire all around
+			cells[0] = new Cell(Cell.TREE);
+			for (int j = 1; j < cells.length; j++) {
+				cells[j] = new Cell(Cell.BURNING);
 			}
-			c.spread(PROBTEST, cells[0], cells[1], cells[2], cells[NUMOFADJACENTTREES - 1]);
-			for (int j = 0; j < cells.length; j++) {
-				if (cells[j].getState() == Cell.BURNING) {
-					counter++;
-				}
+			
+			//testing arbitrary cells for the correct probability that they burn
+			cells[0].spread(PROBTEST, cells[1], cells[2], cells[NUMOFADJACENTTREES - 1], cells[NUMOFADJACENTTREES]);
+			if (cells[0].getState() == Cell.BURNING) {
+				counter++;
 			}
 		}
-		double percentage = (double) counter / (TIMESTOTEST * NUMOFADJACENTTREES);
+		double percentage = (double) counter / TIMESTOTEST;
 		assertTrue (percentage > PROBTEST - MARGIN && percentage < PROBTEST + MARGIN);
 		
+		//next test that spread works in all cells, even boundary cases
 		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
 			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
-				g.getGrid()[i][j].setState(Cell.BURNING);
+				
+				//set current test cell to tree
+				g.getGrid()[i][j].setState(Cell.TREE);
 				
 				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
 				
@@ -123,24 +130,10 @@ public class CellTest extends TestCase {
 				cell[3] = g.getGrid()[i][j + 1];
 				cell[4] = g.getGrid()[i][j - 1];
 				
-				int[] oldState = new int[NUMOFADJACENTTREES + 1];
-				int[] newState = new int[NUMOFADJACENTTREES + 1];
-				
-				for (int k = 0; k < NUMOFADJACENTTREES + 1; k++) {
-					oldState[k] = cell[k].getState();
-				}
-				
-				cell[0].spread(PROBTEST, cell[0], cell[1], cell[2], cell[3]);
+				cell[0].spread(PROBTEST, cell[1], cell[2], cell[3], cell[4]);
 					
-				for (int k = 0; k < NUMOFADJACENTTREES + 1; k++) {
-					newState[k] = cell[k].getState();
-					
-					System.out.println("k value: " + k + "\nOld: " + oldState[k] + "\nNew: " + newState[k]);
-					if (oldState[k] == Cell.TREE) {
-						assertTrue(newState[k] == Cell.BURNING || newState[k] == Cell.TREE);
-					} else {
-						assertEquals(newState[k], Cell.EMPTY);
-					}
+				if (cell[1].getState() == Cell.BURNING || cell[2].getState() == Cell.BURNING || cell[3].getState() == Cell.BURNING || cell[4].getState() == Cell.BURNING) {
+					assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
 				}
 			}
 		}

@@ -1,5 +1,7 @@
 package edu.ncsu.csc216.fire;
 
+import java.util.ArrayList;
+
 /**
  * A grid holding all the Cell objects
  * @author Andrew Kofink and James Bruening
@@ -25,6 +27,11 @@ public class Grid {
 	 * The cell in the center of the grid
 	 */
 	private static final int CENTER = 5;
+	
+	/**
+	 * The cell in the center of the grid
+	 */
+	private static final int NUMOFADJACENTCELLS = 5;
 	
 	/**
 	 * Builds the grid of trees and empty spaces with burning
@@ -76,16 +83,28 @@ public class Grid {
 	 * Increments to the time step
 	 */
 	public void nextTimestep() {
-		while (!done()) {
-			for (int i = 1; i < sideLength - 1; i++) {
-				for (int j = 1; j < sideLength - 1; j++) {
-					if (cells[i][j].getState() == Cell.BURNING) {
-						cells[i][j].spread(probCatch, cells[i][j - 1],
-								cells[i - 1][j], cells[i][j + 1],
-								cells[i + 1][j]);
+		ArrayList<Cell[]> toBurn = new ArrayList<Cell[]>();
+		ArrayList<Cell> toEmpty = new ArrayList<Cell>();
+		
+		for (int i = 1; i < sideLength - 1; i++) {
+			for (int j = 1; j < sideLength - 1; j++) {
+				if (cells[i][j].getState() == Cell.TREE) {
+					if (cells[i - 1][j].getState() == Cell.BURNING || cells[i + 1][j].getState() == Cell.BURNING || cells[i][j - 1].getState() == Cell.BURNING || cells[i][j + 1].getState() == Cell.BURNING) {
+						Cell[] centerAndAdjacentCells = {cells[i][j], cells[i + 1][j], cells[i - 1][j], cells[i][j + 1], cells[i][j -1]};
+						toBurn.add(centerAndAdjacentCells);
 					}
+				} else if (cells[i][j].getState() == Cell.BURNING) {
+					toEmpty.add(cells[i][j]);
 				}
 			}
+		}
+		
+		for (int i = 0; i < toBurn.size(); i++) {
+			toBurn.get(i)[0].spread(probCatch, toBurn.get(i)[1], toBurn.get(i)[2], toBurn.get(i)[3], toBurn.get(i)[4]);
+		}
+		
+		for (int i = 0; i < toEmpty.size(); i++) {
+			toEmpty.get(i).setState(Cell.EMPTY);
 		}
 	}
 }
