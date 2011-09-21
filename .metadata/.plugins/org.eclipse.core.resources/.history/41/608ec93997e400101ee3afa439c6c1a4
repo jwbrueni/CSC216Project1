@@ -51,7 +51,7 @@ public class CellTest extends TestCase {
 	/**
 	 * Margin of error for test
 	 */
-	private static final double MARGIN = .05;
+	private static final double MARGIN = .1;
 
 	/**
 	 * Number of adjacent trees (N, S, E, W)

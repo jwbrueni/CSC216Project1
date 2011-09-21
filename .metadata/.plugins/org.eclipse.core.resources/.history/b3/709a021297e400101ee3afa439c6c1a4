@@ -72,7 +72,7 @@ public class Cell {
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
 		if (north.getState() == Cell.BURNING || east.getState() == Cell.BURNING || south.getState() == Cell.BURNING || west.getState() == Cell.BURNING) {
 			Random rand = new Random();
-			if (rand.nextDouble() < probCatch) {
+			if (rand.nextDouble() <= probCatch) {
 				this.setState(Cell.BURNING);
 			}
 		}
