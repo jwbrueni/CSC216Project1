@@ -87,6 +87,7 @@ public class Grid {
 					if (cells[i - 1][j].getState() == Cell.BURNING || cells[i][j + 1].getState() == Cell.BURNING || cells[i + 1][j].getState() == Cell.BURNING || cells[i][j - 1].getState() == Cell.BURNING) {
 						Cell[] centerAndAdjacentCells = {cells[i][j], cells[i - 1][j].copy(), cells[i][j + 1].copy(), cells[i + 1][j].copy(), cells[i][j - 1].copy()};
 						toBurn.add(centerAndAdjacentCells);
+						System.out.println(toBurn.size());
 					}
 				} else if (cells[i][j].getState() == Cell.BURNING) {
 					toEmpty.add(cells[i][j]);
@@ -94,9 +95,9 @@ public class Grid {
 			}
 		}
 		
-		for (int i = 0; i < toBurn.size(); i++) {
+		for (int i = 0; i <= toBurn.size(); i++) {
 			int j = 0;
-			toBurn.get(i)[j++].spread(probCatch, toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++]);
+			toBurn.get(i)[j].spread(probCatch, toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++]);
 		}
 		
 		for (int i = 0; i < toEmpty.size(); i++) {

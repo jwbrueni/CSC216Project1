@@ -58,6 +58,8 @@ public class Cell {
 	 */
 	public Cell copy() {
 		Cell newCell = new Cell(this.getState());
+		newCell = this;
+		
 		return newCell;
 	}
 	

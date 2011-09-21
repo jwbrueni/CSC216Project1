@@ -88,8 +88,7 @@ public class CellTest extends TestCase {
 	 * Tests the copy method of a cell
 	 */
 	public void testCopy() {
-		assertFalse (c == c.copy());
-		assertEquals(c.getState(), c.copy().getState());
+		assertTrue (c.equals(c.copy()));
 	}
 	
 	/**
