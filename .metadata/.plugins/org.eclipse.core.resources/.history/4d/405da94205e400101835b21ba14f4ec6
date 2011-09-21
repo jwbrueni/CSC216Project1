@@ -99,11 +99,13 @@ public class CellTest extends TestCase {
 		int counter = 0;
 		for (int i = 0; i < TIMESTOTEST; i++) {
 			Cell[] cells = new Cell[NUMOFADJACENTTREES + 1];
+			
 			//filling arbitrary cells with tree in center and fire all around
 			cells[0] = new Cell(Cell.TREE);
 			for (int j = 1; j < cells.length; j++) {
 				cells[j] = new Cell(Cell.BURNING);
 			}
+			
 			//testing arbitrary cells for the correct probability that they burn
 			cells[0].spread(PROBTEST, cells[1], cells[2], cells[NUMOFADJACENTTREES - 1], cells[NUMOFADJACENTTREES]);
 			if (cells[0].getState() == Cell.BURNING) {
@@ -116,19 +118,21 @@ public class CellTest extends TestCase {
 		//next test that spread works in all cells, even boundary cases
 		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
 			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
+				
 				//set current test cell to tree
 				g.getGrid()[i][j].setState(Cell.TREE);
+				
 				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
-				int k = 0;
-				cell[k] = g.getGrid()[i][j];
-				cell[k++] = g.getGrid()[i + 1][j];
-				cell[k++] = g.getGrid()[i - 1][j];
-				cell[k++] = g.getGrid()[i][j + 1];
-				cell[k++] = g.getGrid()[i][j - 1];
-				k = 0;
-				cell[k].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-				k = 1;
-				if (cell[k].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
+				
+				cell[0] = g.getGrid()[i][j];
+				cell[1] = g.getGrid()[i + 1][j];
+				cell[2] = g.getGrid()[i - 1][j];
+				cell[3] = g.getGrid()[i][j + 1];
+				cell[4] = g.getGrid()[i][j - 1];
+				
+				cell[0].spread(PROBTEST, cell[1], cell[2], cell[3], cell[4]);
+					
+				if (cell[1].getState() == Cell.BURNING || cell[2].getState() == Cell.BURNING || cell[3].getState() == Cell.BURNING || cell[4].getState() == Cell.BURNING) {
 					assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
 				}
 			}

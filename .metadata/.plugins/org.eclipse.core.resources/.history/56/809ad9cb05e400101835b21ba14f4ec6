@@ -95,8 +95,8 @@ public class Grid {
 		}
 		
 		for (int i = 0; i < toBurn.size(); i++) {
-			int j = 0;
-			toBurn.get(i)[j].spread(probCatch, toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++]);
+			k = 0;
+			toBurn.get(i)[k].spread(probCatch, toBurn.get(i)[k++], toBurn.get(i)[k++], toBurn.get(i)[k++], toBurn.get(i)[k++]);
 		}
 		
 		for (int i = 0; i < toEmpty.size(); i++) {
