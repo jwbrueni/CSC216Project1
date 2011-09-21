@@ -80,7 +80,10 @@ public class Cell {
 				if (currentRand <= probCatch) {
 					cell.setState(Cell.BURNING);
 				}
+			} else if (cell.getState() == 2) {
+				cell.setState(Cell.EMPTY);
 			}
 		}
+		this.setState(Cell.EMPTY);
 	}	
 }

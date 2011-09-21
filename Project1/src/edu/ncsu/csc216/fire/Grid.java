@@ -76,11 +76,14 @@ public class Grid {
 	 * Increments to the time step
 	 */
 	public void nextTimestep() {
-		for (int i = 0; i < sideLength; i++) {
-			for (int j = 0; j < sideLength; j++) {
-				if (cells[i][j].getState() == Cell.BURNING) {
-					cells[i][j].spread(probCatch, cells[i][j - 1], cells[i - 1][j], cells[i][j + 1], cells[i + 1][j]);
-					cells[i][j].setState(Cell.EMPTY);
+		while (!done()) {
+			for (int i = 1; i < sideLength - 1; i++) {
+				for (int j = 1; j < sideLength - 1; j++) {
+					if (cells[i][j].getState() == Cell.BURNING) {
+						cells[i][j].spread(probCatch, cells[i][j - 1],
+								cells[i - 1][j], cells[i][j + 1],
+								cells[i + 1][j]);
+					}
 				}
 			}
 		}

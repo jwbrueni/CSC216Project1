@@ -23,5 +23,4 @@ public class Driver {
 		Grid g = new Grid(SIDELENGTH, PROBCATCH);
 		Display d = new Display(g);
 	}
-
 }

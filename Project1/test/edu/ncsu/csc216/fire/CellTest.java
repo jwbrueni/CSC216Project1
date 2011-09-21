@@ -12,6 +12,11 @@ public class CellTest extends TestCase {
 	 * A test Cell
 	 */
 	public static Cell c;
+	
+	/**
+	 * A test Grid
+	 */
+	public static Grid g;
 
 	/**
 	 * Initial state
@@ -32,6 +37,16 @@ public class CellTest extends TestCase {
 	 * Probability of adjacent trees burning
 	 */
 	private static final double PROBTEST = .55;
+	
+	/**
+	 * Side length of the forest
+	 */
+	private static final int SIDELENGTH = 9;
+	
+	/**
+	 * Side length of the grid
+	 */
+	private static final int ACTUALSIDELENGTH = 11;
 
 	/**
 	 * Margin of error for test
@@ -44,12 +59,13 @@ public class CellTest extends TestCase {
 	private static final int NUMOFADJACENTTREES = 4;
 	
 	/**
-	 * Builds a cell, c.
+	 * Builds a cell, c and a grid, g
 	 */
 	protected void setUp() throws Exception {
 		super.setUp();
 		
 		c = new Cell(TESTSTATE);
+		g = new Grid(SIDELENGTH ,PROBTEST);
 	}
 	
 	/**
@@ -94,6 +110,39 @@ public class CellTest extends TestCase {
 		}
 		double percentage = (double) counter / (TIMESTOTEST * NUMOFADJACENTTREES);
 		assertTrue (percentage > PROBTEST - MARGIN && percentage < PROBTEST + MARGIN);
+		
+		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
+			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
+				g.getGrid()[i][j].setState(Cell.BURNING);
+				
+				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
+				
+				cell[0] = g.getGrid()[i][j];
+				cell[1] = g.getGrid()[i + 1][j];
+				cell[2] = g.getGrid()[i - 1][j];
+				cell[3] = g.getGrid()[i][j + 1];
+				cell[4] = g.getGrid()[i][j - 1];
+				
+				int[] oldState = new int[NUMOFADJACENTTREES + 1];
+				int[] newState = new int[NUMOFADJACENTTREES + 1];
+				
+				for (int k = 0; k < NUMOFADJACENTTREES + 1; k++) {
+					oldState[k] = cell[k].getState();
+				}
+				
+				cell[0].spread(PROBTEST, cell[0], cell[1], cell[2], cell[3]);
+					
+				for (int k = 0; k < NUMOFADJACENTTREES + 1; k++) {
+					newState[k] = cell[k].getState();
+					
+					System.out.println("k value: " + k + "\nOld: " + oldState[k] + "\nNew: " + newState[k]);
+					if (oldState[k] == Cell.TREE) {
+						assertTrue(newState[k] == Cell.BURNING || newState[k] == Cell.TREE);
+					} else {
+						assertEquals(newState[k], Cell.EMPTY);
+					}
+				}
+			}
+		}
 	}
-
 }
