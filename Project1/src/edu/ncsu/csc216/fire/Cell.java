@@ -70,11 +70,15 @@ public class Cell {
 	 * @param west the west tree
 	 */
 	public void spread(double probCatch, Cell north, Cell east, Cell south, Cell west) {
-		if (this.getState() == Cell.TREE && (north.getState() == Cell.BURNING || east.getState() == Cell.BURNING || south.getState() == Cell.BURNING || west.getState() == Cell.BURNING)) {
-			Random rand = new Random();
-			if (rand.nextDouble() < probCatch) {
-				this.setState(Cell.BURNING);
+		if (this.getState() == Cell.TREE) {
+			if (north.getState() == Cell.BURNING || east.getState() == Cell.BURNING || south.getState() == Cell.BURNING || west.getState() == Cell.BURNING) {
+				Random rand = new Random();
+				if (rand.nextDouble() < probCatch) {
+					this.setState(Cell.BURNING);
+				}
 			}
+		} else if (this.getState() == Cell.BURNING) {
+			this.setState(Cell.EMPTY);
 		}
 	}	
 }

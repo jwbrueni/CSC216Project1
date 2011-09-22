@@ -1,0 +1,108 @@
+package edu.ncsu.csc216.fire;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+/**
+ * Visualization of the Spreading of Fire application
+ * CSC216 Program 1 - Fall 2011
+ *
+ * @author Ed Gehringer
+ * @author Sarah Heckman
+ * @version 1.0
+ */
+public class Display {
+	/** Array containing colors in the display: yellow, green, red */
+	Color[] colors; 
+	/** Display's JFrame */
+	JFrame window;
+	/** Canvas for the display */
+	JPanel canvas;
+	/** The length/width of a cell in the display */
+	int cellSize;
+	/** An instance of the underlying model */
+	Grid grid;
+	/** The size of the grid */
+	int dimension;
+
+	/**
+	 * Constructor, sets up top-level window and Canvas
+	 * @param g a grid to display
+	 */
+	public Display(Grid g) {
+		// Initialize the state of the display with the given 
+		// Grid information
+		colors = new Color[]{Color.yellow, Color.green, Color.red};
+		cellSize = 10;
+		grid = g;
+		dimension = grid.getGrid().length;
+				
+		// Create the display 
+		window = new JFrame("Fire Simulation");
+		// The X button will stop execution of the program
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		// Create a new JPanel and override the default paintComponent
+		// behavior
+		canvas = new JPanel() {
+			private static final long serialVersionUID = 1L;
+
+			/**
+			 * Override of JPanel.paintComponent that paints the
+			 * JPanel with the yellow, green, or red cells as appropriate for
+			 * the given Grid.
+			 */
+			public void paintComponent(Graphics g) {
+				Cell[][] tempGrid = grid.getGrid();
+				for (int i = 0; i < dimension; i++) {
+					for (int j = 0; j < dimension; j++) {
+						g.setColor(colors[tempGrid[i][j].getState()]);
+						g.fillRect(cellSize*i, cellSize*j, cellSize, cellSize);
+					}
+				}
+			}
+		};
+		
+		// Set the size of the canvas to show all info
+		canvas.setPreferredSize(new Dimension(cellSize*dimension, cellSize*dimension));
+		
+		// Add the canvas to the JFrame
+		window.add(canvas);
+		
+		//Fit everything into the minimal space
+		window.pack();
+		
+		//Display the JFrame and the visualization of the Grid
+		window.setVisible(true);
+	}
+	
+	/**
+	 * Call this method when you want the grid updated.
+	 * This will update the display with the current state of the Grid.
+	 */
+	public void show() {
+		// Repaint will call the JPanel.paintComponent method that
+		// will update the Display with the latest grid state
+		window.repaint();
+		// Wait 200 milliseconds.  This allows the updated display to
+		// be seen by the human eye.
+		try { 
+			Thread.currentThread();
+			Thread.sleep(20000); 
+		} catch (InterruptedException e) {
+			// Do nothing here if the exception is thrown
+		}
+	}
+	
+	/**
+	 * When the window is closed, dispose of the JFrame and it's
+	 * components.
+	 */
+	public void dispose() {
+		window.dispose();
+	}
+}

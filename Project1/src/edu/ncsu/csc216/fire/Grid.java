@@ -1,7 +1,5 @@
 package edu.ncsu.csc216.fire;
 
-import java.util.ArrayList;
-
 /**
  * A grid holding all the Cell objects
  * @author Andrew Kofink and James Bruening
@@ -78,29 +76,18 @@ public class Grid {
 	 * Increments to the time step
 	 */
 	public void nextTimestep() {
-		ArrayList<Cell[]> toBurn = new ArrayList<Cell[]>();
-		ArrayList<Cell> toEmpty = new ArrayList<Cell>();
+		Cell[][] tempCells = new Cell[sideLength + 2][sideLength + 2];
 		
-		for (int i = 1; i < sideLength - 1; i++) {
-			for (int j = 1; j < sideLength - 1; j++) {
-				if (cells[i][j].getState() == Cell.TREE) {
-					if (cells[i - 1][j].getState() == Cell.BURNING || cells[i][j + 1].getState() == Cell.BURNING || cells[i + 1][j].getState() == Cell.BURNING || cells[i][j - 1].getState() == Cell.BURNING) {
-						Cell[] centerAndAdjacentCells = {cells[i][j], cells[i - 1][j].copy(), cells[i][j + 1].copy(), cells[i + 1][j].copy(), cells[i][j - 1].copy()};
-						toBurn.add(centerAndAdjacentCells);
-					}
-				} else if (cells[i][j].getState() == Cell.BURNING) {
-					toEmpty.add(cells[i][j]);
-				}
+		for (int i = 0; i < sideLength; i++) {
+			for (int j = 0; j < sideLength; j++) {
+				tempCells[i][j] = this.getGrid()[i][j].copy();
 			}
 		}
 		
-		for (int i = 0; i < toBurn.size(); i++) {
-			int j = 0;
-			toBurn.get(i)[j++].spread(probCatch, toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++], toBurn.get(i)[j++]);
-		}
-		
-		for (int i = 0; i < toEmpty.size(); i++) {
-			toEmpty.get(i).setState(Cell.EMPTY);
+		for (int i = 1; i < sideLength - 1; i++) {
+			for (int j = 1; j < sideLength - 1; j++) {
+				this.getGrid()[i][j].spread(probCatch, tempCells[i - 1][j], tempCells[i][j + 1], tempCells[i + 1][j], tempCells[i][j - 1]);
+			}
 		}
 	}
 }

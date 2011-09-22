@@ -100,39 +100,14 @@ public class CellTest extends TestCase {
 		//next test that spread works in all cells, even boundary cases
 		for (int i = 1; i < ACTUALSIDELENGTH - 1; i++) {
 			for (int j = 1; j < ACTUALSIDELENGTH - 1; j++) {
-				Cell[] cell = new Cell[NUMOFADJACENTTREES + 1];
-				int k = 0;
-				cell[k++] = g.getGrid()[i][j];
-				cell[k++] = g.getGrid()[i + 1][j];
-				cell[k++] = g.getGrid()[i - 1][j];
-				cell[k++] = g.getGrid()[i][j + 1];
-				cell[k++] = g.getGrid()[i][j - 1];
-				for (int l = 0; l < cell.length; l++) {
-					cell[l].setState(Cell.TREE);
-				}
-				for (int l = 1; l < cell.length; l++) {
-					cell[l].setState(Cell.BURNING);
-					//set current test cell to tree
-					g.getGrid()[i][j].setState(Cell.TREE);
-					
-					
-					k = 0;
-					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-					
-					k = 1;
-					if (cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING || cell[k++].getState() == Cell.BURNING) {
-						assertTrue(cell[0].getState() == Cell.TREE || cell[0].getState() == Cell.BURNING);
-					}
-					
-					g.getGrid()[i][j].setState(Cell.EMPTY);
-					k = 0;
-					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-					assertEquals (cell[0].getState(), Cell.EMPTY);
-					
-					g.getGrid()[i][j].setState(Cell.BURNING);
-					k = 0;
-					cell[k++].spread(PROBTEST, cell[k++], cell[k++], cell[k++], cell[k++]);
-					assertEquals (cell[0].getState(), Cell.BURNING);
+				int oldState = g.getGrid()[i][j].getState();
+				g.getGrid()[i][j].spread(PROBTEST, g.getGrid()[i - 1][j], g.getGrid()[i][j + 1], g.getGrid()[i + 1][j], g.getGrid()[i][j - 1]);
+				if (oldState == Cell.EMPTY) {
+					assertEquals(g.getGrid()[i][j].getState(), oldState);
+				} else if (oldState == Cell.TREE) {
+					assertTrue(g.getGrid()[i][j].getState() == oldState || g.getGrid()[i][j].getState() == Cell.BURNING);
+				} else {
+					assertEquals(g.getGrid()[i][j].getState(), Cell.EMPTY);
 				}
 			}
 		}

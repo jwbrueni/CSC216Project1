@@ -3,15 +3,15 @@
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.WizardSettings">
 		<item value="1033" key="DIALOG_WIDTH"/>
 		<item value="104" key="DIALOG_Y_ORIGIN"/>
-		<item value="444" key="DIALOG_X_ORIGIN"/>
 		<item value="635" key="DIALOG_HEIGHT"/>
+		<item value="444" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.PreselectedIUInstallWizard.WizardSettings">
 		<item value="671" key="DIALOG_WIDTH"/>
 		<item value="73" key="DIALOG_Y_ORIGIN"/>
-		<item value="430" key="DIALOG_HEIGHT"/>
 		<item value="-53" key="DIALOG_X_ORIGIN"/>
+		<item value="430" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>
