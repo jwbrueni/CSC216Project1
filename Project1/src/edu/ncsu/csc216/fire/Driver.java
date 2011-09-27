@@ -5,28 +5,58 @@ package edu.ncsu.csc216.fire;
  * @author Andrew Kofink and James Bruening
  */
 public class Driver {
-
-	/**
-	 * The probability at which a tree will burn
-	 * when next to a burning tree
-	 */
-	private static final double PROBCATCH = .55;
+	
+	public static final int NUMOFTIMESTOTEST = 10;
+	public static final double INCREMENT = .05;
 	
 	/**
 	 * The side length of the forest
 	 */
-	private static final int SIDELENGTH = 9;
+	private int sideLength;
+	
+	public Driver(int sideLength) {
+		this.sideLength = sideLength;
+	}
 	
 	/**
-	 * The main executing class of the program
-	 * @param args Other arguments passed to main
+	 * 
+	 * @return
 	 */
-	public static void main(String[] args) {
-		Grid g = new Grid(SIDELENGTH, PROBCATCH);
-		Display d = new Display(g);
-		while(!g.done()) {
-			g.nextTimestep();
-			d.show();
+	RunGroup[] simulate() {
+		RunGroup[] rg = new RunGroup[(int) (1 / INCREMENT)];
+		
+		int j = 0;
+		for(double i = 0; i <= 1; i += INCREMENT) {
+			//System.out.println("For percent: " + (i * 100) + "%\n");
+			rg[j] = new RunGroup();
+			
+			double[] pctTreesBurned = new double[NUMOFTIMESTOTEST];
+			int[] timesteps = new int[NUMOFTIMESTOTEST];
+			
+			for(int k = 0; k < NUMOFTIMESTOTEST; k++) {
+				Grid g = new Grid(sideLength, i);
+				//Display d = new Display(g);
+				while(!g.done()) {
+					g.nextTimestep();
+					//d.show();
+				}
+				timesteps[k] = g.getNumTimesteps();
+				pctTreesBurned[k] = g.getPctBurned();
+			}
+			
+			rg[j].calculateAvgPctBurned(pctTreesBurned);
+			rg[j].calculateAvgTimesteps(timesteps);
+			j++;
 		}
+		return rg;
+	}
+	
+	/**
+	 * 
+	 * @param probCatch
+	 * @return
+	 */
+	RunGroup replicate(double probCatch) {
+		return null;
 	}
 }

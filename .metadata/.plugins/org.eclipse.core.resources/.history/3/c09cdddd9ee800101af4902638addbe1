@@ -1,0 +1,30 @@
+package edu.ncsu.csc216.fire;
+
+/**
+ * Maintains the Grid and Display objects
+ * @author Andrew Kofink and James Bruening
+ */
+public class Driver {
+	
+	/**
+	 * The side length of the forest
+	 */
+	private int sideLength;
+	
+	/**
+	 * 
+	 * @return
+	 */
+	RunGroup[] simulate() {
+		return null;
+	}
+	
+	/**
+	 * 
+	 * @param probCatch
+	 * @return
+	 */
+	RunGroup replicate(double probCatch) {
+		return null;
+	}
+}

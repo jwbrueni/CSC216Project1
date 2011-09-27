@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="35" version="2.0">
+<workbench progressCount="40" version="2.0">
 <workbenchAdvisor/>
-<window height="774" maximized="true" width="1266" x="14" y="22">
+<window height="1054" width="1280" x="34" y="22">
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="org.eclipse.team.svn.ui.repository.RepositoriesView"/>
 <orientation position="512" view="org.eclipse.egit.ui.RepositoriesView"/>
@@ -33,38 +33,33 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="3"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 <part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" partName="Cell.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/Cell.java" title="Cell.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Cell.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cell.java" partName="Cell.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/Cell.java" title="Cell.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Cell.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/Cell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="148" selectionOffset="1357" selectionTopPixel="789"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="914" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Grid.java" partName="Grid.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/Grid.java" title="Grid.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Grid.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/Grid.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1855" selectionTopPixel="924"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GridTest.java" partName="GridTest.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/test/edu/ncsu/csc216/fire/GridTest.java" title="GridTest.java" tooltip="Project1/test/edu/ncsu/csc216/fire/GridTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/test/edu/ncsu/csc216/fire/GridTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="1046" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CellTest.java" partName="CellTest.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/test/edu/ncsu/csc216/fire/CellTest.java" title="CellTest.java" tooltip="Project1/test/edu/ncsu/csc216/fire/CellTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/test/edu/ncsu/csc216/fire/CellTest.java"/>
-<editorState selectionHorizontalPixel="31" selectionLength="0" selectionOffset="3180" selectionTopPixel="1337"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="778" selectionTopPixel="422"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Driver.java" partName="Driver.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/Driver.java" title="Driver.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Driver.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/Driver.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="280" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="286" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Display.java" partName="Display.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/Display.java" title="Display.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Display.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/Display.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2612" selectionTopPixel="275"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunGroup.java" partName="RunGroup.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/RunGroup.java" title="RunGroup.java" tooltip="Project1/src/edu/ncsu/csc216/fire/RunGroup.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/RunGroup.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="747" selectionTopPixel="268"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UI.java" partName="UI.java" path="/Users/akofink/Dropbox/2011_2012/CSC 216/projects/1/Project1/src/edu/ncsu/csc216/fire/UI.java" title="UI.java" tooltip="Project1/src/edu/ncsu/csc216/fire/UI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project1/src/edu/ncsu/csc216/fire/UI.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="613" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -76,9 +71,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (2 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="409"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -135,7 +127,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -320,37 +312,27 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.72303206" ratioLeft="496" ratioRight="190" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.72303206" ratioLeft="496" ratioRight="190" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -358,23 +340,17 @@
 </info>
 <info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
 <info part="org.eclipse.ui.editorss" ratio="0.44903582" ratioLeft="326" ratioRight="400" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -386,162 +362,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/test/edu/ncsu/csc216/fire/CellTest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/Cell.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/Grid.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/RunGroup.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/Driver.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/Display.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/test/edu/ncsu/csc216/fire/GridTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/Grid.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/src/edu/ncsu/csc216/fire/UI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/test/edu/ncsu/csc216/fire/DriverTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project1/test/edu/ncsu/csc216/fire/RunGroupTest.java"/>
 </editors>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="230" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="229" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="Cell.java" index="0">
+<position info="not_deleted" x="1688" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="1986" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="2415" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1705" y="0"/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="1201" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="110" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="29" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="379" y="0"/>
 </item>
-<item historyLabel="Driver.java" index="3">
-<position info="not_deleted" x="280" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="473" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1705" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="552" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1911" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="633" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1963" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="715" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1999" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2002" y="0"/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="394" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2018" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2045" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="320" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2048" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="326" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2071" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2072" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="981" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2038" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="905" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2015" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1992" y="0"/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="394" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1923" y="0"/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="1201" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1926" y="0"/>
+<item historyLabel="Cell.java" index="0">
+<position info="not_deleted" x="914" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="1929" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="905" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2140" y="0"/>
+<item historyLabel="DriverTest.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2143" y="0"/>
+<item historyLabel="RunGroupTest.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2154" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="905" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2137" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="2403" y="0"/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="394" y="0"/>
 </item>
-<item historyLabel="Display.java" index="4">
-<position info="not_deleted" x="2612" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="29" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="346" y="0"/>
 </item>
-<item historyLabel="Driver.java" index="3">
-<position info="not_deleted" x="543" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="481" y="0"/>
 </item>
-<item historyLabel="Display.java" index="4">
-<position info="not_deleted" x="2612" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="688" y="0"/>
 </item>
-<item historyLabel="Driver.java" index="3">
-<position info="not_deleted" x="280" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="818" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1628" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="816" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1677" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="890" y="0"/>
 </item>
-<item historyLabel="CellTest.java" index="0">
-<position info="not_deleted" x="3180" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1701" y="0"/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="1227" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1677" y="0"/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="394" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1927" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="890" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1912" y="0"/>
+<item historyLabel="Driver.java" index="2">
+<position info="not_deleted" x="286" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1746" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1759" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="890" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1780" y="0"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1357" y="148"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="890" y="0"/>
 </item>
-<item historyLabel="Grid.java" index="2">
-<position info="not_deleted" x="1927" y="44"/>
+<item historyLabel="RunGroup.java" index="1">
+<position info="not_deleted" x="747" y="0"/>
 </item>
-<item historyLabel="GridTest.java" index="5">
-<position info="not_deleted" x="1046" y="16"/>
+<item historyLabel="Grid.java" index="3">
+<position info="not_deleted" x="778" y="0"/>
 </item>
-<item historyLabel="Driver.java" index="3">
-<position info="not_deleted" x="280" y="0"/>
+<item historyLabel="UI.java" index="4">
+<position info="not_deleted" x="890" y="0"/>
 </item>
-<item active="true" historyLabel="Cell.java" index="1">
-<position info="not_deleted" x="1357" y="148"/>
+<item active="true" historyLabel="UI.java" index="4">
+<position info="not_deleted" x="678" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -549,9 +526,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -560,11 +534,22 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunGroupTest.java" tooltip="Project1/test/edu/ncsu/csc216/fire/RunGroupTest.java">
+<persistable path="/Project1/test/edu/ncsu/csc216/fire/RunGroupTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DriverTest.java" tooltip="Project1/test/edu/ncsu/csc216/fire/DriverTest.java">
+<persistable path="/Project1/test/edu/ncsu/csc216/fire/DriverTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UI.java" tooltip="Project1/src/edu/ncsu/csc216/fire/UI.java">
+<persistable path="/Project1/src/edu/ncsu/csc216/fire/UI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunGroup.java" tooltip="Project1/src/edu/ncsu/csc216/fire/RunGroup.java">
+<persistable path="/Project1/src/edu/ncsu/csc216/fire/RunGroup.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Display.java" tooltip="Project1/src/edu/ncsu/csc216/fire/Display.java">
 <persistable path="/Project1/src/edu/ncsu/csc216/fire/Display.java"/>
 </file>

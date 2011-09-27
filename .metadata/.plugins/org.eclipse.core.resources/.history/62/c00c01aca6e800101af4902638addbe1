@@ -1,0 +1,63 @@
+package edu.ncsu.csc216.fire;
+
+/**
+ * Maintains the Grid and Display objects
+ * @author Andrew Kofink and James Bruening
+ */
+public class Driver {
+	
+	public static final int NUMOFTIMESTOTEST = 10;
+	public static final double INCREMENT = .05;
+	
+	/**
+	 * The side length of the forest
+	 */
+	private int sideLength;
+	
+	public Driver(int sideLength) {
+		this.sideLength = sideLength;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	RunGroup[] simulate() {
+		RunGroup[] rg = new RunGroup[(int) (1 / INCREMENT)];
+		
+		int j = 0;
+		for(double i = 0; i <= 1; i += INCREMENT) {
+			//System.out.println("For percent: " + (i * 100) + "%\n");
+			rg[j] = new RunGroup();
+			
+			double[] pctTreesBurned = new double[NUMOFTIMESTOTEST];
+			int[] timesteps = new int[NUMOFTIMESTOTEST];
+			
+			for(int k = 0; k < NUMOFTIMESTOTEST; k++) {
+				Grid g = new Grid(sideLength, i);
+				//Display d = new Display(g);
+				while(!g.done()) {
+					g.nextTimestep();
+					//d.show();
+				}
+				timesteps[k] = g.getNumTimesteps();
+				pctTreesBurned[k] = g.getPctBurned();
+			}
+			
+			rg[j].calculateAvgPctBurned(pctTreesBurned);
+			rg[j].calculateAvgTimesteps(timesteps);
+			j++;
+		}
+		
+		return rg;
+	}
+	
+	/**
+	 * 
+	 * @param probCatch
+	 * @return
+	 */
+	RunGroup replicate(double probCatch) {
+		return null;
+	}
+}

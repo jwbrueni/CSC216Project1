@@ -1,0 +1,76 @@
+package edu.ncsu.csc216.fire;
+
+/**
+ * 
+ * @author Andrew Kofink and James Bruening
+ */
+public class RunGroup {
+	
+	/**
+	 * 
+	 */
+	private double avgPctBurned;
+	
+	/**
+	 * 
+	 */
+	private double avgTimesteps;
+	
+	/**
+	 * 
+	 */
+	private double firstQuartile;
+	
+	/**
+	 * 
+	 */
+	private double thirdQuartile;
+	
+	/**
+	 * 
+	 * @param dataset
+	 */
+	public static void calculateAvgPctBurned(double[] dataset) {
+		
+	}
+	
+	/**
+	 * 
+	 * @param dataset
+	 */
+	public static void calculateAvgTimesteps(int[] dataset) {
+		
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public double getAvgPctBurned() {
+		return avgPctBurned;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public double getAvgTimesteps() {
+		return avgTimesteps;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public double getFirstQuartile() {
+		return firstQuartile;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public double getThirdQuartile() {
+		return thirdQuartile;
+	}
+}
